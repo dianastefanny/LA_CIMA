@@ -1,0 +1,17 @@
+{
+  "name": "la_cima",
+  "version": "1.0.0",
+  "description": "Proyecto La Cima",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "mysql2": "^3.14.3",
+    "open": "^10.2.0"
+  }
+}
