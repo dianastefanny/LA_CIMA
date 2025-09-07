@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constructora La Cima</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+  </head>
+<body>
+  <header>
+    <nav>
+      <img src="img/Terminado_Fondo_negro[1].jpg" alt="Logo CIMA CONSTRUCTORA">
+      <ul>
+        <li><button onclick="mostrarModal('quienes')">¿Quiénes somos?</button></li>
+        <li><button onclick="mostrarModal('mision')">Misión/Visión</button></li>
+        <li><button onclick="window.location.href='/login'">Clientes</button></li>
+        <li><button onclick="mostrarModal('contacto')">Contáctanos</button></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="main">
+    <h1>BIENVENIDOS</h1>
+    <p>Somos constructora LA CIMA dedicada a la fabricación de la casa de tus sueños</p>
+  </section>
+
+  <section class="servicios">
+    <div class="servicio">
+      <img src="img/image casa.png" alt="Viviendas">
+      <h3>Viviendas</h3>
+      <p class="descripcion-corta">sueña en grande con la vivienda que tanto sueñas, somos la mejor opción para ti y tu familia. Te ofrecemos servicios de diseño, construcción, mantenimiento, remodelación, reparación, entre otros.</p>
+      <p class="descripcion-larga oculto">Ofrecemos diseño, construcción, mantenimiento y remodelación de viviendas a medida para ti y tu familia. Nuestro equipo garantiza calidad y confianza en cada proyecto.</p>
+      <button class="btn-vermas" onclick="verMas(this)">Ver más</button>
+    </div>
+    <div class="servicio">
+      <img src="img/image grua 3.png" alt="Proyectos">
+      <h3>Proyectos</h3>
+      <p>Construir obras y viviendas de calidad Centrar la acción en las personas Crecer de forma rentable y segura Respetar la comunidad y el medio ambiente Ofrecer productos y servicios eficientes.</p>
+      <p class="descripcion-larga oculto">Desarrollamos proyectos integrales con altos estándares de calidad, enfocados en la sostenibilidad y el bienestar de la comunidad, para construir espacios duraderos y funcionales.</p>
+      <button class="btn-vermas" onclick="verMas(this)">Ver más</button>
+    </div>
+    <div class="servicio">
+      <img src="img/image muñeca.png" alt="Encuestas para casa de tus sueños">
+      <h3>Encuestas para casa de tus sueños</h3>
+      <p>Ser una empresa constructora con gran presencia a nivel nacional Liderar la modernización de la ciudad Fortalecer la infraestructura urbana Impulsar el desarrollo económico y social de la comunidad.</p>
+      <p class="descripcion-larga oculto">Recopilamos tus ideas y preferencias a través de encuestas detalladas para diseñar y construir la casa que realmente se adapte a tu estilo de vida y necesidades.</p>
+      <button class="btn-vermas" onclick="verMas(this)">Ver más</button>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Estamos en:</strong> San Juan del Cesar - La Guajira</p>
+    <p>Dirección: Carrera 13 # 8-38<br>
+    Teléfonos: 3145676097<br>
+    Correos: Lacimaconstructora2025@gmail.com</p>
+  </footer>
+  <div class="footer-bottom">
+    <span>&copy; LA CIMA CONSTRUCTORA</span>
+    <span><a href="#">Políticas de privacidad</a></span>
+  </div>
+
+  <script src="js/script.js"></script>
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <div id="modal-texto"></div>
+    </div>
+  </div>
+</body>
+</html>

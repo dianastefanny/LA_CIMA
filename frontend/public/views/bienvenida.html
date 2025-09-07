@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenida - La Cima Constructora</title>
+  <link rel="stylesheet" href="/css/estilos.css"> <!-- Usa tus estilos -->
+</head>
+<body class="bienvenida">
+  <div class="container">
+    <img src="img/Terminado_Fondo_negro[1].jpg" alt="Logo La Cima" class="logo">
+    <h1 id="titulo">¡Bienvenido!</h1>
+    <a href="/auth/logout" class="btn">Cerrar sesión</a>
+  </div>
+
+  <script>
+    // Al cargar la página, pedimos al servidor los datos del usuario
+    fetch("/api/session")
+      .then(res => res.json())
+      .then(data => {
+        if (data.user) {
+          // Si viene de login → mensaje de bienvenida
+          if (data.type === "login") {
+            document.getElementById("titulo").innerText = "¡Bienvenido de nuevo!";
+            document.getElementById("mensaje").innerText = `Hola ${data.user.nombre}, nos alegra verte otra vez.`;
+          }
+          // Si viene de registro → mensaje de confirmación
+          if (data.type === "registro") {
+            document.getElementById("titulo").innerText = "¡Registro Exitoso!";
+            document.getElementById("mensaje").innerText = `Gracias ${data.user.nombre}, ahora eres parte de La Cima Constructora.`;
+          }
+        } else {
+          window.location.href = "/login"; // seguridad extra
+        }
+      });
+  </script>
+</body>
+</html>
