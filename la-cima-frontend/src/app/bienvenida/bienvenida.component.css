@@ -1,0 +1,60 @@
+.bienvenida-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #004d00, #00cc66);
+}
+
+.bienvenida-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 400px;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #0e5e3a;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-encuesta {
+  background-color: #00994d;
+  color: #fff;
+}
+
+.btn-encuesta:hover {
+  background-color: #00994d;
+}
+
+.btn-salir {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.btn-salir:hover {
+  background-color: #c9302c;
+}

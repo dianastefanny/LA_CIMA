@@ -1,0 +1,52 @@
+<div class="login-container">
+  <img src="assets/img_logo.jpg" alt="Logo La Cima" />
+  <h2>Bienvenido</h2>
+
+  <!-- Formulario de Inicio de Sesión -->
+  <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+    <input 
+      type="text" 
+      [(ngModel)]="usuarioLogin" 
+      name="usuarioLogin" 
+      placeholder="Usuario" 
+      required
+    />
+    <input 
+      type="password" 
+      [(ngModel)]="contrasenaLogin" 
+      name="contrasenaLogin" 
+      placeholder="Contrasena" 
+      required
+    />
+    <button type="submit">Ingresar</button>
+  </form>
+
+  <hr />
+
+  <!-- Formulario de Registro -->
+  <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+    <input 
+      type="text" 
+      [(ngModel)]="nombreCompleto" 
+      name="nombreCompleto" 
+      placeholder="Nombre completo" 
+      required
+    />
+    <input 
+      type="text" 
+      [(ngModel)]="usuarioRegistro" 
+      name="usuarioRegistro" 
+      placeholder="Usuario" 
+      required
+    />
+    <input 
+      type="password" 
+      [(ngModel)]="contrasenaRegistro" 
+      name="contrasenaRegistro" 
+      placeholder="Contrasena" 
+      required
+    />
+    <button type="submit">Registrarme</button>
+  </form>
+<button routerLink="/">Volver a la página principal</button>
+</div>
